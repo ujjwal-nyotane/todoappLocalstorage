@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .page{
+            display: grid;
+            width:88.5vw;
+            grid-template-columns: 1fr 1fr;
+            margin:0;
+
+        }
+        .card{
+            min-height:94vh;
+        }
+        .left{
+            background-color: rgb(220, 220, 220);
+            padding: 20px;
+           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .right{
+            padding: 20px;
+        }
+        form{
+            height: 100%;
+        }
+        form input{
+
+            
+            border:none;
+            outline: none;
+            width:100%;
+            margin:15%;
+            height:10%;
+            font-size: 200%;
+            font-weight: 800;
+        }
+        form>input:active ,form>input:focus{
+            outline: hidden;
+            border:hidden;
+        }
+        .tasks{
+            margin:4px;
+            padding:10px;
+            font-size: x-large;
+            border-bottom: 1px solid rgba(90,90,90,.5);
+            display: flex;
+            flex-direction: row;
+           
+        }
+        .tasks:last-child{
+            border-bottom: none;
+        }
+        .tasks .tool{
+            margin-left:auto;
+        } 
+        .tasks .tool button{
+            background: none;
+            border: none;
+            font-weight: 600;
+            font-size: large;
+            margin:8px;
+        }
+        .tasks .tool input{
+            transform: scale(1.5);
+            accent-color: lightgreen;
+             outline-offset: -2px;
+            
+            outline: 2px solid black;
+
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="card left">
+            <h1>  TASK LIST   </h1>
+            <p style="font-size: larger; color: rgb(90, 90, 90);" >Add task to your list by typing and pressing enter.
+                You may then view pending tasks below</p>
+            <div class="tasklist">
+
+            </div>
+
+        </div>
+        <div class=" card right">
+            <form id="taskform" >
+                <input name="task" type="text" required placeholder="I need to...">
+
+            </form>
+
+        </div>
+    </div>
+    
+</body>
+<script src="main.js"></script>
+</html>
